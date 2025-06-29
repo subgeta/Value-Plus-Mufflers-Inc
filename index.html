@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Value Plus Mufflers Inc. - Quality Exhaust Services in Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e63946;
+            --secondary: #1d3557;
+            --light: #f1faee;
+            --accent: #a8dadc;
+            --dark: #457b9d;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: var(--light);
+        }
+        
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo span {
+            color: var(--primary);
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 0.5rem;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav li {
+            margin: 0 1rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c1121f;
+            transform: translateY(-3px);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            height: 200px;
+            background-color: var(--accent);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-content h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .contact-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .contact-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+        
+        .hours-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .hours-table th, .hours-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .hours-table th {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .review-card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+        
+        .reviewer {
+            font-weight: bold;
+        }
+        
+        .rating {
+            color: gold;
+        }
+        
+        .map {
+            height: 400px;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 2rem;
+        }
+        
+        .social-links {
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 0.5rem 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Value <span>Plus</span> Mufflers Inc.</div>
+        <p>Quality Exhaust Services Since 1995</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#location">Location</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <h1>Expert Muffler & Exhaust Services in Chicago</h1>
+        <p>Family-owned and operated since 1995, we provide high-quality exhaust system repairs and replacements at fair prices.</p>
+        <a href="#contact" class="btn">Call Now</a>
+    </section>
+    
+    <div class="container">
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Muffler Replacement</h3>
+                        <p>We offer top-quality muffler replacements with a variety of options to fit your vehicle and budget. Our technicians will help you choose the best muffler for your needs.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Exhaust System Repair</h3>
+                        <p>From small leaks to complete system overhauls, our experts can diagnose and repair any exhaust system issue to keep your vehicle running smoothly and quietly.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="service-content">
+                        <h3>Catalytic Converters</h3>
+                        <p>We provide catalytic converter services including inspections, repairs, and replacements to ensure your vehicle meets emissions standards while maintaining performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="reviews">
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">Michael T.</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <p>"These guys are the real deal! Fixed my muffler issue in under an hour at a price that was half what the dealership quoted. Honest, fast, and professional service. I'll be back for all my exhaust needs."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">Sarah K.</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <p>"Value Plus saved me so much money! My car was making a terrible noise and another shop wanted to replace my entire exhaust system. Value Plus found it was just a loose bracket and fixed it for $25. Unbelievable honesty!"</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">James R.</span>
+                        <span class="rating">★★★★☆</span>
+                    </div>
+                    <p>"Great service overall. They replaced my catalytic converter quickly and the price was fair. Only reason for 4 stars instead of 5 is that the waiting area is pretty basic, but the work is top-notch."</p>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-header">
+                        <span class="reviewer">Lisa M.</span>
+                        <span class="rating">★★★★★</span>
+                    </div>
+                    <p>"Family-owned business that treats you like family. They've been servicing my cars for 10 years and I wouldn't go anywhere else for exhaust work. Fair prices, honest advice, and quality work every time."</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Address</h3>
+                    <p>4321 N Western Ave # 1<br>Chicago, IL 60618</p>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Phone</h3>
+                    <p><a href="tel:773-583-5663">(773) 583-5663</a></p>
+                    <a href="tel:773-583-5663" class="btn">Call Now</a>
+                </div>
+                
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Business Hours</h3>
+                    <table class="hours-table">
+                        <tr>
+                            <th>Day</th>
+                            <th>Hours</th>
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td>9:00 AM–2 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>8:30 AM–6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>8:30 AM–6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>8:30 AM–6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>8:30 AM–6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>8:30 AM–6 PM</td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>8:30 AM–4 PM</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <section id="location">
+            <h2>Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2967.015072376052!2d-87.68954292416438!3d41.95611815982004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd19a6e0b1f91%3A0x9a9e9a1b6e0b1f91!2s4321%20N%20Western%20Ave%20%231%2C%20Chicago%2C%20IL%2060618!5e0!3m2!1sen!2sus!4v1625090000000!5m2!1sen!2sus" class="map" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="logo">Value <span>Plus</span> Mufflers Inc.</div>
+        <p>Quality Exhaust Services Since 1995</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-yelp"></i></a>
+        </div>
+        <p>&copy; 2023 Value Plus Mufflers Inc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
